@@ -1,6 +1,6 @@
 var config = {
   basePath: '/bws/api',
-  disableLogs: false,
+  disableLogs: true,
   port: 3232,
 
   // Uncomment to make BWS a forking server
@@ -21,20 +21,20 @@ var config = {
 
   storageOpts: {
     mongoDb: {
-      uri: 'mongodb://localhost:27017/bws',
+      uri: 'mongodb://mongodb:27017/bws',
     },
   },
   lockOpts: {
     //  To use locker-server, uncomment this:
     lockerServer: {
-      host: 'localhost',
+      host: '0.0.0.0',
       port: 3231,
     },
   },
   messageBrokerOpts: {
     //  To use message broker server, uncomment this:
     messageBrokerServer: {
-      url: 'http://localhost:3380',
+      url: 'http://0.0.0.0:3380',
     },
   },
   blockchainExplorerOpts: {
